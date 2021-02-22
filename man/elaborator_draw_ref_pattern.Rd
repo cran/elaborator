@@ -2,25 +2,28 @@
 % Please edit documentation in R/elaborator_draw_ref_pattern.R
 \name{elaborator_draw_ref_pattern}
 \alias{elaborator_draw_ref_pattern}
-\title{elaborator_draw_ref_pattern - create the Reference-value based pattern plots}
+\title{Generates tree diagram according to the reference-value based pattern analysis}
 \usage{
 elaborator_draw_ref_pattern(
   pattern_Matrix,
   fontsize,
-  numberColumns,
-  ColorBG = "#E2F3F2"
+  number_columns,
+  background_color = "#E2F3F2"
 )
 }
 \arguments{
 \item{pattern_Matrix}{matrix with reference-value based pattern information}
 
-\item{fontsize}{font size}
+\item{fontsize}{font size of numbers printed inside the circles}
 
-\item{numberColumns}{number of columns}
+\item{number_columns}{number of layers (visits) of tree diagram}
 
-\item{ColorBG}{background color}
+\item{background_color}{background color}
+}
+\value{
+No return value; this function is called to draw a tree diagram according to the reference-value based pattern analysis.
 }
 \description{
-elaborator_draw_ref_pattern - create the Reference-value based pattern plots
+Generate tree diagram showing the number of patients with normal/abnormal values at each visit of a study according to the reference-value based pattern analysis.
 }
 \keyword{internal}

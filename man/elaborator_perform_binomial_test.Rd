@@ -2,7 +2,7 @@
 % Please edit documentation in R/elaborator_perform_binomial_test.R
 \name{elaborator_perform_binomial_test}
 \alias{elaborator_perform_binomial_test}
-\title{elaborator_perform_binomial_test - calculates binomial test for the change of a labparameter from one visit to another}
+\title{Performs binomial test for changes of a laboratory parameter between two visits}
 \usage{
 elaborator_perform_binomial_test(
   data,
@@ -16,17 +16,20 @@ elaborator_perform_binomial_test(
 \arguments{
 \item{data}{data set}
 
-\item{treatment}{treatment variable}
+\item{treatment}{name of treatment group}
 
-\item{lab_parameter}{llab parameter variable of the data set}
+\item{lab_parameter}{name of laboratory parameter}
 
-\item{Visit1}{visit time point one}
+\item{Visit1}{name of visit time point one}
 
-\item{Visit2}{visit time point two}
+\item{Visit2}{name of visit time point two}
 
-\item{lab_column}{lab parameter column}
+\item{lab_column}{column name of data which includes the laboratory parameter names}
+}
+\value{
+A list of class "htest", with the results of the binomial test.
 }
 \description{
-elaborator_perform_binomial_test - calculates binomial test for the change of a labparameter from one visit to another
+This function is mostly useful for generating the quantitative trend analysis plots. It returns the output of a binomial test result used for colorizing the background of the plots.
 }
 \keyword{internal}

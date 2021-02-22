@@ -1,10 +1,15 @@
-#' elaborator_draw_curved_line - Draw a curved line from start to end point
+#' Draws a curved line from start to end point
+#'
+#' @description
+#' This function is mostly useful for generating the reference-value based pattern analysis plots. It draws a curved line from a start to an end point.
 #'
 #' @param x1 x-coordinate of the starting point
 #' @param x2 x-coordinate of the end point
 #' @param y1 y-coordinate of the starting point
 #' @param y2 y-coordinate of the end point
-#' @param ... further parameter
+#' @param ... further parameters
+#'
+#' @return No return value; this function is called to draw curved lines of the reference-value based pattern plot.
 #'
 #' @keywords internal
 

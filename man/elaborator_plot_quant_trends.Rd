@@ -2,7 +2,7 @@
 % Please edit documentation in R/elaborator_plot_quant_trends.R
 \name{elaborator_plot_quant_trends}
 \alias{elaborator_plot_quant_trends}
-\title{elaborator_plot_quant_trends - Function to draw Boxplots for each Treatment and Labparameter}
+\title{Generates boxplots for each treatment group and laboratory parameter}
 \usage{
 elaborator_plot_quant_trends(
   dat1,
@@ -27,39 +27,42 @@ elaborator_plot_quant_trends(
 \arguments{
 \item{dat1}{data set}
 
-\item{signtest}{boolean value if signtest should be performded (TRUE/FALSE)}
+\item{signtest}{logical, if true sign test, otherwise t-test for comparing Visit1 and Visit2 is performed}
 
-\item{Visit1}{visit time point one}
+\item{Visit1}{name of visit time point one}
 
-\item{Visit2}{visit time point two}
+\item{Visit2}{name of visit time point two, or vector of visit names for pairwise comparison to Visit1}
 
-\item{sameaxes}{boolean value if boxplot should have the same y-axis for the treatments within a labparameter}
+\item{sameaxes}{logical indicating if boxplot should have the same y-axis range for all treatment groups within a laboratory parameter}
 
-\item{ats}{ats parameter}
+\item{ats}{numeric vector giving the locations where the boxplots should be drawn; defaults to 1:n where n is the number of boxplots.}
 
-\item{cols}{colors of boxplots}
+\item{cols}{vector with colors of boxplots}
 
-\item{labelvis}{visibility of labels}
+\item{labelvis}{vector of visit names used for labelling}
 
-\item{labcolumn}{labparameter column}
+\item{labcolumn}{column name of dat1 which includes the laboratory parameter names}
 
-\item{sortpoints}{boolean value if dots in boxplot should be sorted}
+\item{sortpoints}{logical indicating if dots in boxplots should be sorted from smallest to largest}
 
-\item{pcutoff}{limit for p-values were the background should be colored}
+\item{pcutoff}{numeric for p-value threshold; if p-value of specified test is below this threshold, the background of the respective plot is colorized.}
 
 \item{cexoutliers}{size of the outliers}
 
-\item{infotest}{List object from the perform test function.}
+\item{infotest}{list object from the perform test function}
 
-\item{sortinput}{sorting rule}
+\item{sortinput}{vector of laboratory parameter names in the order in which laboratory parameters are presented in the output}
 
-\item{bordercol}{color of boxes which are not selected to perform a test}
+\item{bordercol}{color of boxes which are not selected for hypothesis testing}
 
-\item{add_points}{boolean value if points should be added to the Boxplots (TRUE/FALSE)}
+\item{add_points}{logical indicating if points showing patients' values should be added to the boxplots}
 
-\item{connect_lines}{boolean value if subject values should be connected via lines (TRUE/FALSE)}
+\item{connect_lines}{logical indicating if subject values should be connected between visits via lines}
+}
+\value{
+No return value. Generates plots for the quantitative trends analysis.
 }
 \description{
-elaborator_plot_quant_trends - Function to draw Boxplots for each Treatment and Labparameter
+Generate boxplots showing the distribution of laboratory values at each visits of a study separately by treatment group and laboratory parameter according to the quantitative trend analysis.
 }
 \keyword{internal}

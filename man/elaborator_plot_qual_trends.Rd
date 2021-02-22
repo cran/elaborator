@@ -2,13 +2,12 @@
 % Please edit documentation in R/elaborator_plot_qual_trends.R
 \name{elaborator_plot_qual_trends}
 \alias{elaborator_plot_qual_trends}
-\title{elaborator_plot_qual_trends - creates the qualitative trends plot in the shiny app elaborator}
+\title{Generates the qualitative trends analysis plots in the shiny app elaborator}
 \usage{
 elaborator_plot_qual_trends(
   dat1,
   Variab,
   fontsize = 1,
-  percent = 0.1,
   method = "InQuRa",
   color_palette = c("#ffffff", "#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c",
     "#fc4e2a", "#e31a1c", "#bd0026", "#800026", "#000000"),
@@ -18,19 +17,20 @@ elaborator_plot_qual_trends(
 \arguments{
 \item{dat1}{data set}
 
-\item{Variab}{variable}
+\item{Variab}{vector of names for laboratory parameters}
 
-\item{fontsize}{font size}
+\item{fontsize}{font size of numbers inside the cells of the diagram}
 
-\item{percent}{percentage}
+\item{method}{method specifying if values are considered being stable if the difference falls below a specific percentage of the reference range (Reference Range), interquartile range (InQuRa) or range (Range).}
 
-\item{method}{method}
-
-\item{color_palette}{color vector}
+\item{color_palette}{vector with 11 colors used for background of the cells}
 
 \item{Summa}{summarization matrix}
 }
+\value{
+No return value. Generates plots for the qualitative trend analysis.
+}
 \description{
-elaborator_plot_qual_trends - creates the qualitative trends plot in the shiny app elaborator
+Generates diagrams showing the frequency of specific patterns of decreased, stable and increased values between adjacent visits of a study separately by treatment group and laboratory parameter according to the qualitative trend analysis.
 }
 \keyword{internal}

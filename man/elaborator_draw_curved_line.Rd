@@ -2,7 +2,7 @@
 % Please edit documentation in R/elaborator_draw_curved_line.R
 \name{elaborator_draw_curved_line}
 \alias{elaborator_draw_curved_line}
-\title{elaborator_draw_curved_line - Draw a curved line from start to end point}
+\title{Draws a curved line from start to end point}
 \usage{
 elaborator_draw_curved_line(x1, y1, x2, y2, ...)
 }
@@ -15,9 +15,12 @@ elaborator_draw_curved_line(x1, y1, x2, y2, ...)
 
 \item{y2}{y-coordinate of the end point}
 
-\item{...}{further parameter}
+\item{...}{further parameters}
+}
+\value{
+No return value; this function is called to draw curved lines of the reference-value based pattern plot.
 }
 \description{
-elaborator_draw_curved_line - Draw a curved line from start to end point
+This function is mostly useful for generating the reference-value based pattern analysis plots. It draws a curved line from a start to an end point.
 }
 \keyword{internal}

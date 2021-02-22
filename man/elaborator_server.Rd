@@ -2,11 +2,17 @@
 % Please edit documentation in R/elaborator_server.R
 \name{elaborator_server}
 \alias{elaborator_server}
-\title{elaborator_server - Server Part of the elaborator application}
+\title{Server part of the elaborator application}
 \usage{
 elaborator_server(input, output, session)
 }
+\arguments{
+\item{id, input, output, session}{Internal parameters for {shiny}.}
+}
+\value{
+No return value. Server part of the app, used in launch_elaborator-function.
+}
 \description{
-elaborator_server - Server Part of the elaborator application
+Server part of the elaborator application
 }
 \keyword{internal}

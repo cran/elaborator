@@ -2,14 +2,17 @@
 % Please edit documentation in R/elaborator_calculate_pattern_number.R
 \name{elaborator_calculate_pattern_number}
 \alias{elaborator_calculate_pattern_number}
-\title{elaborator_calculate_pattern_number - adds one to the pattern for a ternary representation}
+\title{Pattern number for input patterns defined by decreases, stability and increases}
 \usage{
 elaborator_calculate_pattern_number(p)
 }
 \arguments{
-\item{p}{pattern}
+\item{p}{matrix with patterns within each row. A pattern is described by a combination of elements -1, 0, 1 for decrease, stability and increase between adjacent visits.}
+}
+\value{
+A numeric vector giving the pattern numbers for all input patterns.
 }
 \description{
-elaborator_calculate_pattern_number - adds one to the pattern for a ternary representation
+This function is mostly useful for generating the qualitative trend analysis plots. It returns the pattern numbers for input patterns.
 }
 \keyword{internal}

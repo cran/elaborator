@@ -1,27 +1,33 @@
-#' elaborator_draw_dots - Draw a circle in a plot window with specific size/coordinates and colors
-#' @param x x-coordinate of total dot
-#' @param y y-coordinate of total dot
-#' @param height height of curved Lines
-#' @param dot_col color of total dot
-#' @param pattern_Matrix Matrix with the Reference-value based pattern information
-#' @param number_column number of columns (visits)
-#' @param dot_Radius dot radius
-#' @param dot_radius empty group dot radius
-#' @param fontsize font size
+#' Draws a circle with specified size, coordinates and color in a plot window
+#'
+#' @description
+#' This function is mostly useful for generating the reference-value based pattern analysis plots. It draws a circle with specified size, coordinates and color in a plot window.
+#'
+#' @param x x-coordinate of circle
+#' @param y y-coordinate of circle
+#' @param height height of curved lines which connect circles
+#' @param dot_col color of circle
+#' @param pattern_Matrix matrix with the reference-value based pattern information
+#' @param number_column number of layers (visits)
+#' @param dot_Radius circle radius for circles representing existing patterns
+#' @param dot_radius circle radius for circles representing non-existing patterns
+#' @param fontsize font size of numbers printed inside the circles
+#'
+#' @return No return value; this function is called to draw the circles for the reference-value based pattern analysis plot.
 #'
 #' @keywords internal
 
 elaborator_draw_dots <- function(x,y,
-                                   height,
-                                   dot_col,
-                                   pattern_Matrix,
-                                   number_column,
-                                   dot_Radius,
-                                   dot_radius,
-                                   fontsize,
-                                   empty_color = "#A9A9A9",
-                                   upper_color = "#2fb39f",
-                                   lower_color = "#f78300") {
+                                 height,
+                                 dot_col,
+                                 pattern_Matrix,
+                                 number_column,
+                                 dot_Radius,
+                                 dot_radius,
+                                 fontsize,
+                                 empty_color = "#A9A9A9",
+                                 upper_color = "#2fb39f",
+                                 lower_color = "#f78300") {
 
   mid_point <- (y + height) / 2
   total <- sum(pattern_Matrix$number[height:y])
@@ -51,8 +57,8 @@ elaborator_draw_dots <- function(x,y,
 
   if (x < number_column) {
     elaborator_draw_dots(j, mid_point, height, dot_col = upper_color, pattern_Matrix = pattern_Matrix, number_column = number_column, dot_Radius = dot_Radius,
-                           dot_radius = dot_radius, fontsize = fontsize)
+                         dot_radius = dot_radius, fontsize = fontsize)
     elaborator_draw_dots(j, y, mid_point, dot_col = lower_color, pattern_Matrix = pattern_Matrix, number_column = number_column, dot_Radius = dot_Radius,
-                           dot_radius = dot_radius, fontsize = fontsize)
+                         dot_radius = dot_radius, fontsize = fontsize)
   }
 }

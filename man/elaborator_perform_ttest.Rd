@@ -2,7 +2,7 @@
 % Please edit documentation in R/elaborator_perform_ttest.R
 \name{elaborator_perform_ttest}
 \alias{elaborator_perform_ttest}
-\title{elaborator_perform_ttest - performs t-test for changes of a labparameter from one visit to another}
+\title{Performs t-test for changes of a laboratory parameter between two visits}
 \usage{
 elaborator_perform_ttest(
   data,
@@ -16,17 +16,20 @@ elaborator_perform_ttest(
 \arguments{
 \item{data}{data set}
 
-\item{treatment}{treatment variable of the data set}
+\item{treatment}{name of treatment group}
 
-\item{lab_parameter}{lab parameter variable of the data set}
+\item{lab_parameter}{name of laboratory parameter}
 
-\item{lab_column}{lab parameter column}
+\item{Visit1}{name of visit time point one}
 
-\item{visit1}{visit Time point one}
+\item{Visit2}{name of visit time point two}
 
-\item{visit2}{visit Time point two}
+\item{lab_column}{column name of data which includes the laboratory parameter names}
+}
+\value{
+A list of class "htest" with the results of the t-test.
 }
 \description{
-elaborator_perform_ttest - performs t-test for changes of a labparameter from one visit to another
+This function is mostly useful for generating the quantitative trend analysis plots. It returns the output of a t-test result used for colorizing the background of the plots.
 }
 \keyword{internal}

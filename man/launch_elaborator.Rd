@@ -2,7 +2,7 @@
 % Please edit documentation in R/launch_elaborator.R
 \name{launch_elaborator}
 \alias{launch_elaborator}
-\title{launch_elaborator - Launches the elaborator application}
+\title{Launches the elaborator application}
 \usage{
 launch_elaborator(host = "127.0.0.1", port = NULL, browser = NULL)
 }
@@ -20,7 +20,7 @@ A shiny app
 Starts the elaborator application in the client's browser.
 }
 \examples{
-\dontrun{
+if(interactive()){
 ## Launch application on localhost (127.0.0.1)
 ## -------------------------------------------
 ## By default launch_elaborator starts the application on localhost

@@ -2,16 +2,19 @@
 % Please edit documentation in R/elaborator_calculate_pattern.R
 \name{elaborator_calculate_pattern}
 \alias{elaborator_calculate_pattern}
-\title{elaborator_calculate_pattern - function to calculate pattern in ternary respresentation}
+\title{Returns row of a matrix containing all combinations of elements -1, 0, 1 of a pre-specified length}
 \usage{
 elaborator_calculate_pattern(index, number_combinations)
 }
 \arguments{
-\item{index}{row of combination matrix}
+\item{index}{selected row -1 of the combination matrix which shall be returned}
 
 \item{number_combinations}{length of the combination vector}
 }
+\value{
+A numeric vector containing a specific combination of elements -1, 0 and 1; this combination is used to calculate pattern for qualitative trend analysis plot.
+}
 \description{
-elaborator_calculate_pattern - function to calculate pattern in ternary respresentation
+This function is mostly useful for generating the qualitative trend analysis plots. It returns the (i-1)-th row of a matrix containing all combinations of elements -1, 0 and 1 of a pre-specified length.
 }
 \keyword{internal}

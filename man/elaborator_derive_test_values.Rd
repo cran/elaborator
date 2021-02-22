@@ -2,7 +2,7 @@
 % Please edit documentation in R/elaborator_derive_test_values.R
 \name{elaborator_derive_test_values}
 \alias{elaborator_derive_test_values}
-\title{elaborator_derive_test_values - derives p-values/estimates for sign-test or t-test (by applying functions specified above)}
+\title{Derives p-values and estimates for sign test or t-test}
 \usage{
 elaborator_derive_test_values(
   data = data,
@@ -15,15 +15,22 @@ elaborator_derive_test_values(
 \arguments{
 \item{data}{data set}
 
-\item{signtest}{boolean value if signtest should be performded (TRUE/FALSE)}
+\item{signtest}{logical, if true sign test, otherwise t-test for comparing Visit1 and Visit2 is performed}
 
-\item{Visit1}{visit time point one}
+\item{Visit1}{name of visit time point one}
 
-\item{Visit2}{visit time point two}
+\item{Visit2}{name of visit time point two, or vector of visit names for pairwise comparison to Visit1}
 
-\item{lab_column}{lab parameter column}
+\item{lab_column}{column name of data which includes the laboratory parameter names}
+}
+\value{
+A list with p-values and estimates of the selected statistical test. The p-values and estimates will be used to colorize the background of the quantitative trend analysis plots.
+\itemize{
+  \item p.value - p.value of statistical test.
+  \item estimate - estimate of statistical test.
+}
 }
 \description{
-elaborator_derive_test_values - derives p-values/estimates for sign-test or t-test (by applying functions specified above)
+This function is mostly useful for generating the quantitative trend analysis plots. It returns p-values and estimates for the sign test or the t-test used for colorizing the background of the plots.
 }
 \keyword{internal}

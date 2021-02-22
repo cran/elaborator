@@ -2,16 +2,19 @@
 % Please edit documentation in R/elaborator_transform_transparent.R
 \name{elaborator_transform_transparent}
 \alias{elaborator_transform_transparent}
-\title{elaborator_transform_transparent - Calculate the transparent version of a given color}
+\title{Calculates the transparent version of a given color}
 \usage{
 elaborator_transform_transparent(some_color, alpha = 100)
 }
 \arguments{
-\item{some_color}{A color}
+\item{some_color}{A color in hexcode}
 
 \item{alpha}{shading parameter}
 }
+\value{
+A character string representing a color hexcode with added transparency.
+}
 \description{
-elaborator_transform_transparent - Calculate the transparent version of a given color
+Calculates the transparent version of a given color
 }
 \keyword{internal}

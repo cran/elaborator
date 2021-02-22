@@ -1,11 +1,16 @@
-#' elaborator_perform_ttest - performs t-test for changes of a labparameter from one visit to another
+#' Performs t-test for changes of a laboratory parameter between two visits
+#'
+#' @description
+#' This function is mostly useful for generating the quantitative trend analysis plots. It returns the output of a t-test result used for colorizing the background of the plots.
 #'
 #'@param data data set
-#'@param treatment treatment variable of the data set
-#'@param lab_parameter lab parameter variable of the data set
-#'@param visit1 visit Time point one
-#'@param visit2 visit Time point two
-#'@param lab_column lab parameter column
+#'@param treatment name of treatment group
+#'@param lab_parameter name of laboratory parameter
+#'@param Visit1 name of visit time point one
+#'@param Visit2 name of visit time point two
+#'@param lab_column column name of data which includes the laboratory parameter names
+#'
+#'@return A list of class "htest" with the results of the t-test.
 #'
 #'@keywords internal
 

@@ -1,4 +1,4 @@
-#' launch_elaborator - Launches the elaborator application
+#' Launches the elaborator application
 #'
 #' @export
 #'
@@ -12,7 +12,7 @@
 #' @keywords elaborator
 #'
 #' @examples
-#' \dontrun{
+#' if(interactive()){
 #' ## Launch application on localhost (127.0.0.1)
 #' ## -------------------------------------------
 #' ## By default launch_elaborator starts the application on localhost
@@ -50,30 +50,25 @@
 #' launch_elaborator(browser = "C:/Program Files/Mozilla Firefox/firefox.exe")
 #' }
 #'
-#' @import shinyBS
-#' @importFrom shinyjs useShinyjs extendShinyjs inlineCSS click delay disable enable
 #' @import shiny
-#' @import V8
-#' @import plotly
 #' @import haven
 #' @import reshape2
 #' @import shape
 #' @import shinyWidgets
 #' @import shinydashboard
 #' @import bsplus
-#' @import shinycssloaders
 #' @import dplyr
 #' @import forcats
 #' @importFrom purrr map map_int
 #' @importFrom rlang sym
 #' @import tidyr
+#' @importFrom seriation seriate get_order
 #' @import RColorBrewer
-#' @importFrom dendextend assign_values_to_leaves_edgePar
+#' @import dendextend
 #' @importFrom grDevices adjustcolor rgb
 #' @importFrom graphics abline arrows axis boxplot grconvertX grconvertY lines mtext par plot points rect text
 #' @importFrom stats as.dendrogram as.dist binom.test cor median na.omit quantile runif t.test
-#' @import gclus
-#' @importFrom seriation seriate get_order
+#'
 #' @return A shiny app
 
 launch_elaborator <- function(host = "127.0.0.1", port = NULL, browser = NULL){
