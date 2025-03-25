@@ -1,11 +1,11 @@
 Package: elaborator
 Title: A 'shiny' Application for Exploring Laboratory Data
-Version: 1.3.4
+Version: 1.3.5
 Authors@R: c(person("Silke", "Janitza", role = "aut"),
               person("Steffen", "Jeske", role = "aut"),
               person("Madhurima", "Majumder", role = "aut"),
               person("Franco", "Mendolia", role = "aut"),
-              person("Bodo", "Kirsch", email = "bodo.kirsch@bayer.com", role = "cre"),
+              person("Bodo", "Kirsch", email = "kirschbodo@gmail.com", role = "cre"),
               person("Hermann", "Kulmann", role = "aut"))
 Description: A novel concept for generating knowledge and gaining insights into laboratory data. You will be able to efficiently and easily explore your laboratory data from different perspectives. Janitza, S., Majumder, M., Mendolia, F., Jeske, S., & Kulmann, H. (2021) <doi:10.1007/s43441-021-00318-4>.
 Depends: R (>= 3.5.0), seriation
@@ -18,13 +18,13 @@ Imports: shiny, dplyr, purrr, DT, here, tidyselect, rlang, tidyr,
 LazyData: true
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2024-09-18 06:48:35 UTC; sgfpj
+Packaged: 2025-03-24 19:47:04 UTC; sgfpj
 Author: Silke Janitza [aut],
   Steffen Jeske [aut],
   Madhurima Majumder [aut],
   Franco Mendolia [aut],
   Bodo Kirsch [cre],
   Hermann Kulmann [aut]
-Maintainer: Bodo Kirsch <bodo.kirsch@bayer.com>
+Maintainer: Bodo Kirsch <kirschbodo@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-09-18 13:50:02 UTC
+Date/Publication: 2025-03-25 05:50:12 UTC
